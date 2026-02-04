@@ -1,0 +1,9 @@
+HT_011 UX Diagnostic Flow Debriefing
+
+HIT_011 focused on defining and implementing the full UX flow for diagnostics, diseases, and treatments without any backend integration. The core objective was to translate the stub_mp_development_v0.3 HTML stubs into mocked, fully navigable React pages that clearly communicate the cognitive flow for the user. This HIT covered multiple surfaces of the application but strictly avoided touching any domain logic, APIs, schemas, or persistence.
+
+Major deliverables included a significant update to GardenPlantDetail to serve as the central hub of the flow. This screen now displays the latest diagnostic in distinct priority, provides multiple entry points into a glossary modal, and exposes a clear call to action to explore the full history. The glossary modal itself was implemented as a single, reusable component that can be opened from both explicit buttons and implicit icon interactions, aligned with the UX stubs.
+
+The HIT_expanded flow also introduced three new mocked pages: a DiagnosticsHistory list view, a DiseaseDetail view, and a TreatmentDetail view. These pages are fully navigable and share a consistent card visual language, but all data is hardcoded and intentionally mocked. Empty states were explicitly implemented both in the GardenPlantDetail and in the diagnostic history view, ensuring UX robustness even in the absence of data.
+
+A notable observation during this HIT was the addition of an external frontend library for icons. While the library is used only for presentational purposes in this HIT, it introduced a new dependency that must be monitored closely. Future HITs should enforce explicit verification of licensing, copyright, and long-term maintenance implications of any new dependencies added by agents. This was recorded as a new Ship rule to prevent unobserved licensing or compliance risks in future work.
