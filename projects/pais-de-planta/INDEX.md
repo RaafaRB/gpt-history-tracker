@@ -5,3 +5,4 @@ HIT Index
 - HIT_012 - Modelacao Canonica Total
 - HIT_UX_FIX_01 – Healthy Diagnostic UX hardening and legacy flow correction
 - HIT_021 - Treatments snapshot model and status flow
+- HIT_022 - Events notification infrastructure
