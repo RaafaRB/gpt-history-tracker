@@ -1,0 +1,5 @@
+HIT_024 - Care Schedules and Push Integration
+
+This HIT introduced the full care schedule domain and integrated it with the existing notification and Firebase FCM infrastructure. Each GardenPlant now creates three care schedules (watering, fertilizing, pruning) with derived intervals based on canonical plant attributes. Schedules generate persistent Notification records linked via reference_type and reference_id, allowing robust traceability and auditability.
+
+Users can mark a care schedule as done, which atomically updates last_done_at, recalculates next_due_at, and creates a new scheduled notification for the next cycle. The scheduler processes due notifications and delivers real web push messages through FCM. This HIT completes the proactive care loop from plant understanding to user action and regenerative scheduling.
