@@ -1,0 +1,7 @@
+HIT_025 - Care Tasks UX Polish
+
+This HIT polished the care tasks UX by unifying the care schedule representation into a single canonical surface. The duplicate "Cuidados" section was removed, and the existing "TAREFAS" area was connected to real GardenPlantCareSchedule data. The three tasks (watering, pruning, fertilizing) are now rendered in a fixed order and with consistent PT-BR labels (REGA, PODA, ADUBO).
+
+The mocked text and static icons were replaced with dynamic icon selection and a polar ring progress visualization derived from the schedule state. Progress is calculated as elapsed/total interval and clamped to [0,1], supporting a consistent rugged overdue state. The state mapping is explicit and uniform: done when progress < 0.5, attention when 0.5 <= progress < 1.0, and overdue when progress >= 1.0. Clicking the task circle triggers the backend mark-done action and updates the ring and label without page reload.
+
+Glossary integration was preserved and magde explicit: the existing category glossary mechanism remains the only source of truth for explaining levels and task meaning. An info trigger was added to the task card with event isolation to avoid click conflict with the mark-done action. The result is a single, domain-correct, and visually expressive care task section that translates time to due into icons and ring progress rather than mocked text.
