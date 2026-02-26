@@ -1,0 +1,5 @@
+HIT_027 - Images canonicalization
+
+This HIT unified all plant, disease, and treatment image rendering into a single canonical system on the frontend. A new AppImage base component was introduced to enforce consistent sizing, shape, aspect ratio, and fallback placeholders per variant (plant, disease, treatment). Small wrappers (PlantHero, PlantAvatar, DiseaseThumb, DiseaseHero) were added to standardize common contexts such as garden cards and detail headers.
+
+The app was then refactored to use snapshot-first deterministic image priority for diagnostic-context surfaces: diagnostic event image first (diagnostic.image_url), then canonical disease cover (plant_disease.cover_image_url), then a disease placeholder. This single rule now applies consistently to GardenPlantDetail, the diagnostics history, DiseaseDetail, TreatmentDetail, and healthy-diagnostic surfaces. Ad-hoc backgroundImage and raw img usages were removed for entity images, reducing visual drift and eliminating broken layouts when src values are missing.
