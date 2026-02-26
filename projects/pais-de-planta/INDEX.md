@@ -10,3 +10,4 @@ HIT Index
 - HIT_024 - Care schedules and push integration
 - HIT_025 - Care tasks UX polish
 - HIT_026 - Cancelled status and foreground dedupe
+- HIT_027 - Images canonicalization
