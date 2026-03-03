@@ -14,3 +14,4 @@ HIT Index
 - HIT_028 - UI polish plant and disease detail
 - HIT_029 - Auth JWT and refresh multi-user
 - HIT_030 - apiFetch migration and auth compliance sweep
+- HIT_031 - Profile, logout, and web push activation
