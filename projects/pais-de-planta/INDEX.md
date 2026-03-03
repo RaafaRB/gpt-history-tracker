@@ -12,3 +12,4 @@ HIT Index
 - HIT_026 - Cancelled status and foreground dedupe
 - HIT_027 - Images canonicalization
 - HIT_028 - UI polish plant and disease detail
+- HIT_029 - Auth JWT and refresh multi-user
