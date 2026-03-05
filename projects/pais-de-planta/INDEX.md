@@ -16,3 +16,4 @@ HIT Index
 - HIT_030 - apiFetch migration and auth compliance sweep
 - HIT_031 - Profile, logout, and web push activation
 - HIT_033 - Mobile camera-first and safe area fix
+- HIT_034 - Delete garden plant cascade
