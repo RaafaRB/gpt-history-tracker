@@ -15,3 +15,4 @@ HIT Index
 - HIT_029 - Auth JWT and refresh multi-user
 - HIT_030 - apiFetch migration and auth compliance sweep
 - HIT_031 - Profile, logout, and web push activation
+- HIT_033 - Mobile camera-first and safe area fix
