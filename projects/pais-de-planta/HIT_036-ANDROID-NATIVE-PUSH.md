@@ -1,0 +1,5 @@
+# HIT_036 - Android native push (FCM) end-to-end (2026-03-05)
+
+This HIT delivered Android native push notifications end-to-end for the Pais de Planta Capacitor app (Capacitor v8). The mobile client requests Android 13+ notification permission, registers with the official @capacitor/push-notifications plugin, obtains a real FCM token, and registers it to the backend via POST /devices/register using the shared apiFetch layer (Bearer + refresh/retry). A minimal debug surface was added in Profile to expose permission and token acquisition status while masking sensitive token output.
+
+On the backend, Firebase delivery was corrected to split tokens by platform: native tokens (android/ios) use AndroidConfig/ApnsConfig paths while web tokens use WebpushConfig. This fixed a critical bug where WebpushConfig was applied to Android tokens (FCM rejects). Firebase Admin initialization also had dead code due to indentation after an early return, which was corrected. Smoke test was executed deterministically through an authenticated dev trigger (POST /dev/push/send-to-me), producing success_count=1 for one Android token and zero errors.
